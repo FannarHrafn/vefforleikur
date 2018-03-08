@@ -42,3 +42,6 @@ rautt: hratt
 fjólublátt: eðlilegur hraði
 
 blár: hægur
+
+##Links
+Rotate around point http://www.gamefromscratch.com/post/2012/11/24/GameDev-math-recipes-Rotating-one-point-around-another-point.aspx
