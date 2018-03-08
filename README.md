@@ -5,11 +5,8 @@ Aðalega hannað fyrir mobile
 
 
 hjarta í miðjum skjánum með skjöld sem getur hreyfst í kringum hjartað stjórnað af spilara
-
 spilari þarf að vernda hjartað frá hlutum sem fljúga í áttina að hjartanu
-
 skjöldurinn mun vera táknaður sem hluti af hringnum sem hann snýst á í kringum hjartað
-
 óvinir munu vera táknaðir sem kúlur
 
 ## næsta skref
@@ -17,9 +14,7 @@ skjalda stærð mun breytast með erfiðleika
 
 
 easy: skjöldur er 1/4 af hring
-
 normal: skjöldur 1/5 af hring
-
 hard: skjöldur 1/6 af hring
 
 
