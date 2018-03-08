@@ -43,5 +43,14 @@ fjólublátt: eðlilegur hraði
 
 blár: hægur
 
+
+##controls
+annað hvort bar sem er hægt að fara eftir til að færa skjöld:
+
+(neðst--------efst-------neðst)
+
+eða nota annan stærri hring sem mun virka nokkuð eins og analog stick sem er hægt að fara eftir og fingur situr þá á þeim hring á sama stað og spilari vil hafa skjöldin á hinum hringnum
+
+
 ##Links
 Rotate around point http://www.gamefromscratch.com/post/2012/11/24/GameDev-math-recipes-Rotating-one-point-around-another-point.aspx
