@@ -44,7 +44,7 @@ fjólublátt: eðlilegur hraði
 blár: hægur
 
 
-##controls
+## controls
 annað hvort bar sem er hægt að fara eftir til að færa skjöld:
 
 (neðst--------efst-------neðst)
