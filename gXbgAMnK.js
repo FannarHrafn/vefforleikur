@@ -1,22 +1,13 @@
-/**
- * Generated from the Phaser Sandbox
- *
- * //phaser.io/sandbox/gXbgAMnK
- *
- * This source requires Phaser 2.6.2
- */
-
-var game = new Phaser.Game(800, 600, Phaser.AUTO, '', { preload: preload, create: create, update: update, render: render });
-
 function preload() {
 
     game.load.baseURL = 'http://examples.phaser.io/assets/';
     game.load.crossOrigin = 'anonymous';
 
     game.load.image('phaser', 'sprites/phaser-dude.png');
+    game.load.image('ball', 'sprites/pangball.png');
 
 }
-
+var image;
 var circle
 var sprite
 var radius = 150
@@ -28,7 +19,16 @@ var speed=5
 var leftKey, rightKey
 
 function create() {
-
+    game.physics.startSystem(Phaser.Physics.ARCADE);
+    ball = game.add.sprite(400, 200, 'ball');
+    sprite = game.add.sprite(0, 0, 'phaser');
+    sprite.anchor.set(0.5)
+    game.physics.enable([sprite,ball], Phaser.Physics.ARCADE)
+    sprite.body.immovable = true;
+    ball.body.velocity.setTo(50, 50);
+    ball.body.collideWorldBounds = true;
+    ball.body.bounce.setTo(1, 1);
+    
     game.forceSingleUpdate=true
     
     cX = game.world.centerX
@@ -38,8 +38,6 @@ function create() {
     circle.lineStyle(2,0xFF0000)
     circle.drawCircle(cX,cY,radius*2)
     
-    sprite = game.add.sprite(0, 0, 'phaser');
-    sprite.anchor.set(0.5)
     
     // give it an initial position
    moveSpriteOnCircle(angle)
@@ -62,12 +60,10 @@ function moveSpriteOnCircle(deg) {
     sprite.y=cY - newY;
     
 }
-
-
-
 function update() {
 
     var moved=false
+    game.physics.arcade.collide(sprite, ball);
 
     if(leftKey.isDown) {
         angle+=speed
@@ -88,7 +84,6 @@ function update() {
         moveSpriteOnCircle(angle)
     }
 }
-
 function render() {
 
 }
