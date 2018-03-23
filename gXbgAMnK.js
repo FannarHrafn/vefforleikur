@@ -3,7 +3,7 @@ function preload() {
     game.load.baseURL = 'http://examples.phaser.io/assets/';
     game.load.crossOrigin = 'anonymous';
 
-    game.load.image('phaser', 'sprites/phaser-dude.png');
+    game.load.image('phaser', 'sprites/healthbar.png');
     game.load.image('ball', 'sprites/pangball.png');
 
 }
