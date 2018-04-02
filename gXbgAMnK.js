@@ -19,14 +19,21 @@ var speed=5
 var leftKey, rightKey
 
 function create() {
+    //physics
     game.physics.startSystem(Phaser.Physics.ARCADE);
+    //sprites
     ball = game.add.sprite(400, 200, 'ball');
     sprite = game.add.sprite(0, 0, 'phaser');
     sprite.anchor.set(0.5)
+    //bæti við physics við sprites
     game.physics.enable([sprite,ball], Phaser.Physics.ARCADE)
+    //geri varnarsprite immovable svo hann skoppar ekki í burt þegar hann ver
     sprite.body.immovable = true;
+    //hraði á bolta
     ball.body.velocity.setTo(500, 500);
+    //skoppar af  skjánum
     ball.body.collideWorldBounds = true;
+    //heldur allri orku þegar  hann skoppar
     ball.body.bounce.setTo(1, 1);
     
     game.forceSingleUpdate=true
@@ -63,8 +70,9 @@ function moveSpriteOnCircle(deg) {
 function update() {
 
     var moved=false
+    //varnarsprite og bolti skoppa af hvor öðrum
     game.physics.arcade.collide(sprite, ball);
-
+    //sprite.angle svo hann snúist meðfram hringnum
     if(leftKey.isDown) {
         angle+=speed
         moved=true
