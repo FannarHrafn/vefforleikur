@@ -1,5 +1,6 @@
 # vefforleikur
 Leikur fyrir vefforittun tvö
+þetta er meira hugsun fyrir ef ég vill fara lengra með þetta og reyna gera eitthvað app, fyrir skólaverkefnið þá ætla ég  að láta nægja að bara hafa eitthvað skemmtilegt
 ## grunn leikur
 Aðalega hannað fyrir mobile
 
