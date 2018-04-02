@@ -25,7 +25,7 @@ function create() {
     sprite.anchor.set(0.5)
     game.physics.enable([sprite,ball], Phaser.Physics.ARCADE)
     sprite.body.immovable = true;
-    ball.body.velocity.setTo(50, 50);
+    ball.body.velocity.setTo(500, 500);
     ball.body.collideWorldBounds = true;
     ball.body.bounce.setTo(1, 1);
     
@@ -68,11 +68,13 @@ function update() {
     if(leftKey.isDown) {
         angle+=speed
         moved=true
+        sprite.angle-=5
     }
     
     if(rightKey.isDown) {
         angle-=speed
         moved=true
+        sprite.angle+=5
     }
     
     if(angle>=360) 
